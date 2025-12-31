@@ -1,0 +1,203 @@
+/* src/assets/styles/Navbar.css */
+
+/* Reset default margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;   /* ✅ only vertical scroll when needed */
+  overflow-x: hidden; /* ✅ prevent horizontal scrolling */
+  padding-top: 10rem; 
+}
+
+
+/* Navbar container */
+.navbar {
+  width: 99%;
+  height: 6.5rem;             /* FIX: explicitly set height */
+  background-color: #1a1a2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;            /* horizontal padding only */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+
+.logo img {
+  height: 50vh;   /* make it larger */
+  width: auto;
+  margin-right: 12px; /* space between logo and text */
+  vertical-align: middle;
+  margin-top: 13%;
+  margin-left: -25%;
+}
+
+.logo {
+  font-size: 1.6rem;  /* slightly bigger text */
+  font-weight: bold;
+  color: #ffd369;     /* gold color for logo text */
+  display: flex;
+  align-items: center; /* center text with image */
+  gap: 0.6rem;         /* spacing between logo image and text */
+  cursor: pointer;
+}
+
+
+
+/* Navbar links container */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* vertical align links */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: gold + underline */
+.navbar-links li a:hover {
+  color: #ffd369;
+}
+
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd369;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Mobile toggle button */
+.toggle-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a2e;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.8rem 0;
+  }
+
+  .navbar-links li a::after {
+    display: none; /* hide underline effect on mobile */
+  }
+}
+
+
+/* Profile dropdown styles */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-btn {
+  background: none;
+  border: 2px solid #ffd369;
+  color: #ffd369;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.profile-btn:hover {
+  background-color: #ffd369;
+  color: #1a1a2e;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(10, 10, 20, 0.12);
+  min-width: 200px;
+  z-index: 1001;
+  margin-top: 10px;
+  padding: 8px; /* create breathing room so hover highlight looks rounded */
+}
+
+.dropdown-menu .dropdown-item {
+  display: block;
+  width: calc(100% - 16px);
+  padding: 10px 12px;
+  margin: 6px 8px;
+  text-decoration: none;
+  color: #16213e; /* theme dark navy */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.18s ease, transform 0.12s ease;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px; /* ensures hover background is rounded */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(22,33,62,0.06); /* subtle rounded highlight */
+  transform: translateX(4px);
+}
+
+.logout-item {
+  color: #e74c3c;
+  border-top: 1px solid #eee;
+}
+
+.logout-item:hover {
+  background-color: #ffe5e5;
+}

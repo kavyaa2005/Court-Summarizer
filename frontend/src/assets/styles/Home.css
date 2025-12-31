@@ -1,0 +1,290 @@
+/* ================================
+   General Page Styling
+================================ */
+
+
+.home {
+  margin-top: 69rem; /* ❌ replace with padding if navbar is fixed */
+  padding: 40px 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa; /* light grey background */
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+/* ================================
+   Intro Section
+================================ */
+.intro-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  opacity: 0.95;
+  font-family: "Roboto, Segoe UI, Tahoma, Geneva, sans-serif";
+}
+
+.intro-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ================================
+   CTA Button
+================================ */
+.cta-btn {
+  padding: 12px 24px;
+  background-color: #ffd369;
+  color: #1a1a2e;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e6b800;
+}
+
+/* ================================
+   About Section
+================================ */
+.about {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #16213e;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #333;
+  font-family: "Roboto, Segoe UI, Tahoma, Geneva, sans-serif";
+}
+
+/* ================================
+   Features Section
+================================ */
+.features {
+  margin-top: 40px;
+}
+
+.features h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #16213e;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #1a1a2e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #444;
+  font-family: "Roboto, Segoe UI, Tahoma, Geneva, sans-serif";
+}
+
+/* ================================
+   How it Works Section
+================================ */
+.how-it-works {
+  background: #ffffff;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.how-it-works h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #16213e;
+}
+
+.how-it-works ol {
+  margin-left: 20px;
+  color: #333;
+}
+
+.how-it-works li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-family: "Roboto, Segoe UI, Tahoma, Geneva, sans-serif";
+}
+
+/* ================================
+   CTA Section
+================================ */
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #16213e;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.cta-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cta-section .cta-btn {
+  background: #ffd369;
+  color: #1a1a2e;
+}
+
+.cta-section .cta-btn:hover {
+  background: #e6b800;
+}
+
+/* ================================
+   Footer
+================================ */
+/* .footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+} */
+
+/* ================================
+   Responsive Media Queries
+================================ */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .home {
+    padding: 30px 40px;
+  }
+
+  .intro-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .about,
+  .how-it-works {
+    padding: 25px;
+  }
+}
+
+/* Mobile Landscape (≤ 768px) */
+@media (max-width: 768px) {
+  .home {
+    padding: 20px;
+  }
+
+  .intro-section {
+    padding: 40px 15px;
+  }
+
+  .intro-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  .about h2,
+  .features h2,
+  .how-it-works h2 {
+    font-size: 1.4rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Portrait (≤ 480px) */
+@media (max-width: 480px) {
+  .home {
+    padding: 15px;
+  }
+
+  .intro-section {
+    padding: 30px 10px;
+  }
+
+  .intro-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-section p {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+  .about,
+  .how-it-works {
+    padding: 20px 15px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr; /* stack features vertically */
+  }
+
+  .cta-section h2 {
+    font-size: 1.4rem;
+  }
+
+  
+}

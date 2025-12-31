@@ -1,0 +1,63 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import '../assets/styles/Profile.css';
+
+const Profile = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  return (
+    <div className="profile-page">
+      <div className="profile-container">
+        <div className="profile-header">
+          <h1>My Profile</h1>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+
+        <div className="profile-card">
+          <div className="profile-avatar">
+            <div className="avatar-circle">
+              {user?.name?.charAt(0).toUpperCase() || 'U'}
+            </div>
+          </div>
+
+          <div className="profile-details">
+            <div className="detail-item">
+              <label>Full Name</label>
+              <p>{user?.name || 'N/A'}</p>
+            </div>
+
+            <div className="detail-item">
+              <label>Email</label>
+              <p>{user?.email || 'N/A'}</p>
+            </div>
+
+            <div className="detail-item">
+              <label>Occupation</label>
+              <p>{user?.occupation || 'N/A'}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="profile-actions">
+          <button className="action-btn primary-btn" onClick={() => navigate('/case-record')}>
+            📋 View My Summaries
+          </button>
+          <button className="action-btn secondary-btn" onClick={() => navigate('/')}>
+            🏠 Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Profile;

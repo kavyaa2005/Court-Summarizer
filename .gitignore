@@ -1,0 +1,82 @@
+# Python virtual environments
+.venv/
+.venv-1/
+venv/
+env/
+ENV/
+legal_analysis_env/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build outputs
+frontend/dist/
+frontend/build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env.local
+.env.*.local
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Environment variables (with real secrets)
+.env
+.env.production
+
+# Temporary files
+*.tmp
+*.log
+temp/
+tmp/
+
+# Database files (if local SQLite is used)
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads directory (user-uploaded files)
+db-connect/uploads/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Metadata and test results
+metadata/
+results/
